@@ -12,7 +12,6 @@ public class LineBackendApplication implements CommandLineRunner {
 
 	@Autowired
 	TableService tableService;
-	
 
 	public static void main(String[] args) {
 		SpringApplication.run(LineBackendApplication.class, args);
