@@ -6,11 +6,15 @@
 </head>
 <body>
 	<h1>Register</h1>
-	<form action="#" th:action="@{/lineGroup/register/add}"
-		th:object="${lineGroupRegisterForm}" method="post">
+	<form action="#" th:action="@{/lineGroup/register/add}" th:object="${lineGroupRegisterForm}" method="post">
 		<p>
-			Agent Code: <input type="text" th:field="*{agentCode}" /> 
-			<input type="text" th:field="*{groupUserId}" readonly="readonly" />
+			Agent Code: 
+			<select th:field="*{agentCode}">
+				<option value="A0001">ก้าวหน้าโบรกเกอร์</option>
+				<option value="A0002">Silkspan</option>
+			</select> 
+			<br /> 
+			Group User Id: <input type="text" th:field="*{groupUserId}" readonly="readonly" />
 		</p>
 		<p>
 			<input type="submit" value="Submit" />
